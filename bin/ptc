@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const project = require('./../package.json');
+const program = require('commander');
+
+require('autocmdr/lib/logger')(program);
+require('autocmdr/lib/loader')(program);
+require('autocmdr/lib/package')(program);
+require('autocmdr/lib/help')(program);
+
+program
+  .version(project.version)
+  .parse(process.argv);
+
+if (process.argv.length <= 2) {
+  console.log('No command specified. See \'pay-to-contract --help\':');
+  program.outputHelp();
+  process.exit(1);
+}

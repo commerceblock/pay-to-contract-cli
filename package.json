@@ -1,0 +1,29 @@
+{
+  "name": "pay-to-contract",
+  "version": "0.1.0",
+  "description": "Pay to Contract is a contract managment cli tool.",
+  "private": true,
+  "bin": {
+    "pay-to-contract": "./bin/pay-to-contract"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "author": {
+    "name": "Omar Shibli",
+    "email": "omarshib@gmail.com",
+    "url": "http://www.commerceblock.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/commerceblock/pay-to-contract"
+  },
+  "license": "GPL",
+  "bugs": "https://github.com/omarshibli/commerceblock/pay-to-contract/issues",
+  "dependencies": {
+    "autocmdr": "~0.0.7",
+    "bitcore-lib": "^0.13.19",
+    "commander": "~2.0.0"
+  },
+  "devDependencies": {}
+}
