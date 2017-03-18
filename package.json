@@ -16,7 +16,7 @@
     "type": "git",
     "url": "https://github.com/commerceblock/pay-to-contract"
   },
-  "license": "GPL",
+  "license": "GPL-3.0",
   "bugs": "https://github.com/omarshibli/commerceblock/pay-to-contract/issues",
   "dependencies": {
     "autocmdr": "~0.0.7",
