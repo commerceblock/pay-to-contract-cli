@@ -2,7 +2,6 @@
   "name": "pay-to-contract",
   "version": "0.1.0",
   "description": "Pay to Contract is a contract managment cli tool.",
-  "private": true,
   "bin": {
     "pay-to-contract": "./bin/pay-to-contract"
   },
