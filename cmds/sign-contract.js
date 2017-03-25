@@ -1,6 +1,6 @@
 'use strict';
 
-const contract = require('../lib/contract');
+const contract = require('pay-to-contract-lib/lib/contract');
 const fs = require('fs');
 const crypto = require('crypto');
 const HDPublicKey = require('bitcore-lib/lib/hdpublickey');
