@@ -15,7 +15,7 @@ program
   .parse(process.argv);
 
 if (process.argv.length <= 2) {
-  console.log('No command specified. See \'pay-to-contract --help\':');
+  console.log('No command specified. See \'ptc --help\':');
   program.outputHelp();
   process.exit(1);
 }

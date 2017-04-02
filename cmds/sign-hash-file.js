@@ -8,25 +8,19 @@ const HDPublicKey = require('bitcore-lib/lib/hdpublickey');
 module.exports = function(program) {
 
   program
-    .command('create-contract-form <pubkey> <file>')
-    .description('create contract form')
+    .command('sign-hash-file <pubkey> <file>')
+    .description('sign contract with public key and output sha512 signature')
     .action(function(pubkey, file) {
 			const hash = crypto.createHash('sha512');
 			const stream = fs.createReadStream(file);
-
-			stream.on('data', function (data) {
-    		hash.update(data, 'utf8');
-			});
-
+			stream.on('data', (data) => hash.update(data, 'utf8'));
 			stream.on('end', function () {
     		const signature = hash.digest('hex');
 				const hdPublicKey = HDPublicKey.fromString(pubkey);
-				const contractSignatureHash = contract.signAndHashContract(hdPublicKey.publicKey, signature);
-				const result = contract.generateChildPublicKey(hdPublicKey, contractSignatureHash);
+				const result = contract.signAndHashContract(hdPublicKey.publicKey, signature);
 
 				console.log(result.toString());
 			});
-
     });
 
 };
