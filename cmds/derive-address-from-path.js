@@ -6,7 +6,7 @@ const HDPublicKey = require('bitcore-lib/lib/hdpublickey');
 module.exports = function(program) {
 
   program
-    .command('derive-address-from-hash <pubkey> <path>')
+    .command('derive-address-from-path <pubkey> <path>')
     .description('derive a child address from a given BIP32 compliant path')
     .action(function(pubkey, path) {
       const hdPublicKey = HDPublicKey.fromString(pubkey)
