@@ -1,4 +1,4 @@
-# pay-to-contract
+# pay-to-contract-cli
 
 ## Description
 
